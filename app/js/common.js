@@ -8,7 +8,7 @@ $(function() {
 		$(".mobile-menu").toggleClass('open');
 	});
 
-	$(".mobile-menu").on("click","a",function(e){
+	$(".mobile-menu").on("click",".onpage",function(e){
 		e.preventDefault();
 		var t=$(this).attr("href"),i=$(t).offset().top;
 		$("body,html").animate({scrollTop:i},1000);

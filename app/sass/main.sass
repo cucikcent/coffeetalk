@@ -75,7 +75,7 @@ img
 	transition: .5s ease-in-out;
 
 .logo 
-	background: url(../img/logo.png)
+	background: url(../img/logo-min.png)
 	width: 300px
 	height: 120px
 	text-indent: -9999px
@@ -151,11 +151,6 @@ footer
 	z-index: 9999
 	border-bottom: 0
 	
-@media (min-width: 1024px) 
-	.open-button 
-		display: none;
-		
-	
 
 .open-button span 
 	display: block
@@ -199,6 +194,9 @@ footer
 	transform: rotate(-45deg)
 	top: 19px
 	left: 8px
+
+.open-button.open 
+	position: fixed
 	
 
 // Bootstrap Settings

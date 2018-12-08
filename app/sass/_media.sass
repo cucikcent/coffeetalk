@@ -9,23 +9,6 @@
 // ≥992px
 +media-breakpoint-down(md)
 
-// ≥768px
-+media-breakpoint-down(sm)
-
-// ≥576px
-+media-breakpoint-down(xs)
-	body
-		background-size: 200%
-		background-position: right top
-
-	h1
-		font-size: 1.8rem
-
-	menu
-		position: absolute
-		background-color: #fff
-		height: 100vh
-
 	.mobile-menu
 		width: 100%
 		top: 0
@@ -55,6 +38,18 @@
 	
 	.menu .main-menu li button
 		margin: 20px 0px 25px 0px !important
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+	body
+		background-size: 200%
+		background-position: right top
+
+	h1
+		font-size: 1.8rem
 	
 	.pt50m
 		padding-top: 50px
@@ -81,6 +76,8 @@
 
 // ≤992px
 +media-breakpoint-up(lg)
+	.open-button 
+		display: none
 
 // ≤1200px
 +media-breakpoint-up(xl)
