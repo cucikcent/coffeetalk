@@ -1,0 +1,270 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $t-accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font-default
+	overflow-x: hidden
+	color: $t-default
+	background: url(../img/header4_r.png) no-repeat
+	background-size: 100%
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+b, strong
+	font-weight: bold
+
+h2
+	font-family: $font-accent
+
+a
+	color: $t-default
+	&:hover
+		color: black
+
+h1, h2, h3, h4
+	line-height: 1.6
+	font-family: $font-accent
+
+img
+	max-width: 100%
+
+.pt50 
+	padding-top: 50px
+
+.pt20 
+	padding-top: 20px
+
+.pb50
+	padding-bottom: 50px
+
+.pb20 
+	padding-bottom: 20px
+
+.menu
+	ul
+		margin-bottom: 0
+	.main-menu
+		margin-bottom: 15px
+		li
+			margin-left: 15px
+			button
+				margin-left: 30px
+	.second-menu
+		font-weight: 300
+		li
+			margin-left: 30px
+
+.mobile-menu
+	transition: .5s ease-in-out;
+
+.logo 
+	background: url(../img/logo.png)
+	width: 300px
+	height: 120px
+	text-indent: -9999px
+	background-size: contain
+	background-repeat: no-repeat
+	display: block
+
+.descr a 
+	text-decoration: underline
+
+
+.circle 
+	height: 150vh
+	width: 150vh
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	background-color: rgba(141,25,143,.1)
+	position: absolute
+	left: 100%
+	margin-left: -60%
+
+.menu-item
+	font-family: $font-accent
+	// border-bottom: 2px dotted #EF5C34
+	// margin-top: 3px
+	span
+		float: right
+		color: #EF5C34
+
+h3
+	text-align: center
+	margin-top: 15px
+	margin-bottom: 0
+
+.gallery 
+	border: 5px solid white
+	margin-top: 30px
+
+footer 
+	margin-top: -80px
+	font-size: 14px
+	background-color: #f9f9f9
+	img.img-logo
+		opacity: 0.8    
+		// -webkit-filter: grayscale(100%)
+  //  		filter: grayscale(100%)
+
+.sub-footer 
+	font-size: 14px
+	color: #ccc
+	a
+		color: #ccc
+		text-decoration: underline
+	
+
+	// MENU
+
+.mobile-menu.open 
+	display: block
+	
+
+.open-button 
+	width: 30px
+	height: 30px
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	position: absolute
+	cursor: pointer
+	border-bottom: 0
+	top: 50px
+	right: 50px
+	z-index: 9999
+	border-bottom: 0
+	
+@media (min-width: 1024px) 
+	.open-button 
+		display: none;
+		
+	
+
+.open-button span 
+	display: block
+	position: absolute
+	height: 2px
+	width: 100%
+	background: black
+	border-radius: 2px
+	opacity: 1
+	left: 0
+	transform: rotate(0deg)
+	transition: .25s ease-in-out
+	
+
+.open-button span:nth-child(1) 
+	top: 0px
+	transform-origin: left center
+	
+.open-button span:nth-child(2) 
+	top: 10px
+	transform-origin: left center
+	
+
+.open-button span:nth-child(3) 
+	top: 20px
+	transform-origin: left center
+	
+
+.open-button.open span:nth-child(1) 
+	transform: rotate(45deg)
+	top: -3px
+	left: 8px
+	
+
+.open-button.open span:nth-child(2) 
+	width: 0%
+	opacity: 0
+	
+
+.open-button.open span:nth-child(3) 
+	transform: rotate(-45deg)
+	top: 19px
+	left: 8px
+	
+
+// Bootstrap Settings
+
+.btn-primary 
+	background-color: #8D198F
+	border-color: #8D198F
+	&:hover
+		background-color: #821583
+		border-color: #821583
+	
+.btn-primary.focus, .btn-primary:focus
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(141,25,143,.5)
+    box-shadow: 0 0 0 0.2rem rgba(141,25,143,.5)
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle 
+	background-color: #821583
+	border-color: #821583
+
+.carousel-control-next-icon, .carousel-control-prev-icon 
+	width: 40px
+	height: 40px
+
+.carousel-control-next-icon
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
+
+.carousel-control-prev-icon 
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+
+
+	// Example styles Start
+.example-bs
+	padding: $grid-gutter-width/2
+	min-height: 100vh
+	h3
+		margin-bottom: 20px
+	.row
+		text-align: center
+		> .col, > [class^=col-]
+			padding:
+				top: .75rem
+				bottom: .75rem
+			background-color: $dark
+			border: 1px solid darken($dark, 10%)
+			color: #fff
+	[class^="row align-items-"], &.example-flex .row+.row
+		min-height: 10rem
+		background-color: #a3a8ba
+		margin: $grid-gutter-width/2 0
+	.no-gutters
+		> .col, > [class^=col-]
+			border: none
+			background-color: transparent
+			padding:
+				top: 0
+				bottom: 0
+			div
+				background-color: $dark
+				padding:
+					top: .75rem
+					bottom: .75rem
+			&:nth-child(odd)
+				div
+					background-color: lighten($dark, 10%)
+// Example styles End
+
+
+
+@import "media" // Always at the end
